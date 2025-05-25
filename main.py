@@ -233,8 +233,7 @@ def process_callback_query(callback):
 
         receiver_id_display = escape_markdown(whisper_data["receiver_display_name"])
         code_content = format_block_code(whisper_data).replace("هنوز دیده نشده", "Unopened")
-        new_text = f"{receiver_id_display}\n\n
-\n{code_content}\n"
+        new_text = f"{receiver_id_display}\n\n \n{code_content}\n"
 
         reply_target = f"@{whisper_data['sender_username']}" if whisper_data['sender_username'] else str(whisper_data['sender_id'])
         reply_text = f"{reply_target} "
