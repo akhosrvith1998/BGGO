@@ -24,7 +24,7 @@ def webhook():
         return Response(status=500)
 
 if name == "main":
-    webhook_url = os.getenv("WEBHOOK_URL", "https://your-render-app.onrender.com/webhook")
+    webhook_url = os.getenv("WEBHOOK_URL", "https://BGGO-render-app.onrender.com/webhook")
     try:
         response = requests.get(f"{URL}setWebhook?url={webhook_url}")
         response.raise_for_status()  # Raise HTTPError for bad responses (4xx or 5xx)
